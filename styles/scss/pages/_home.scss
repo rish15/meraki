@@ -1,0 +1,57 @@
+.products {
+  background-color: $color-primary;
+  margin-top: 2rem;
+
+  & h5 {
+    font-family: "Lobster Two", cursive;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 3px;
+    font-style: italic;
+    font-size: 5rem;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.contact {
+  background-color: $color-primary;
+  width: 70%;
+  margin: 2rem auto;
+
+  & h5 {
+    font-family: "Lobster Two", cursive;
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 3px;
+    font-style: italic;
+    font-size: 5rem;
+  }
+  & form {
+    text-align: center;
+    & input,
+    textarea {
+      text-align: center;
+      width: 80%;
+      border: 1px solid black;
+      margin: 2rem;
+      height: 4rem;
+      font-size: 1.6rem;
+      font-family: Cabin;
+      transition: all 0.1s;
+
+      & ::-webkit-input-placeholder {
+        text-transform: uppercase;
+        transform: scale(0.45);
+        transform-origin: 0% 50%;
+      }
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+        border-bottom: 3px solid $success;
+      }
+    }
+  }
+}

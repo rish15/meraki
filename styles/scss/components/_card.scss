@@ -1,0 +1,46 @@
+.card {
+  width: 30rem;
+  height: 30rem;
+  padding: 0.5rem;
+  margin: 2rem;
+  box-shadow: 2px 2px 6px 2px rgba($color-black, 0.2rem);
+  position: relative;
+  flex: 1 0 21%;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    z-index: 10;
+    background-color: $color-secondary;
+
+    img {
+      border: 2px solid $color-primary;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    font-style: italic;
+    font-size: 3rem;
+    margin: 0.2rem;
+  }
+
+  &__content {
+    & p {
+      font-size: 1.6rem;
+      margin: 0 0.2rem 2rem 0.2rem;
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  &__image {
+    & img {
+      margin: 0.5rem 0.2rem 0.2rem 0.2rem;
+      width: 100%;
+      height: 14rem;
+      border: 2px solid $color-secondary;
+      padding: 5px;
+    }
+  }
+}

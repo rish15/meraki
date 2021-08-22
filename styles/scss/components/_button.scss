@@ -1,0 +1,21 @@
+.button-primary {
+  height: 4rem;
+  width: 11rem;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+  transition: all 0.2s;
+  font-size: 1.6rem;
+  border: 2px solid $color-secondary;
+  background-color: #fff;
+
+  &:hover {
+    background-color: $color-secondary;
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 4px 0px rgba($color-black, 0.2rem);
+  }
+  &:active {
+    background-color: $color-tertiary;
+  }
+}

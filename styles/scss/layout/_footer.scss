@@ -1,0 +1,46 @@
+.footer {
+  background-color: $color-tertiary;
+  height: 14rem;
+  padding: 2rem;
+  margin: 0 auto;
+
+  &__content {
+    margin-right: 3rem;
+    display: flex;
+
+    &--social {
+      & p {
+        font-size: 1.6rem;
+      }
+      width: 33%;
+      & img {
+        width: 5rem;
+        height: 5rem;
+        margin-right: 1rem;
+      }
+      border-right: 2px solid $color-black;
+    }
+    &--address {
+      width: 33%;
+      padding-left: 1rem;
+      & p {
+        font-size: 1.6rem;
+      }
+      border-right: 2px solid $color-black;
+    }
+    &--contact {
+      //width: 33%;
+      padding-left: 1rem;
+
+      & p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+  &__copyright {
+    & p {
+      text-align: center;
+      font-size: 1.6rem;
+    }
+  }
+}
