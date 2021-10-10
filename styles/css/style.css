@@ -265,16 +265,17 @@ body {
     margin: 3rem;
     justify-content: space-around; }
     .header__message p {
-      font-size: 8rem;
-      font-family: "Ultra", serif;
+      font-size: 9rem;
+      font-family: "Explora", serif;
       padding: 10rem;
-      font-weight: 400; }
-      @media screen and (max-width: 500px) {
+      font-weight: 600; }
+      @media screen and (max-width: 600px) {
         .header__message p {
-          font-size: 4rem;
+          font-size: 8rem;
           padding: 2rem;
-          font-weight: 300;
-          text-align: center; } }
+          font-weight: 600;
+          text-align: center;
+          margin: 0; } }
     .header__message img {
       width: 100rem;
       height: 40rem;
@@ -288,9 +289,8 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
-    font-family: "Lobster Two", cursive;
-    letter-spacing: 2px;
-    font-style: italic; }
+    font-family: "Open sans condensed", cursive;
+    letter-spacing: 2px; }
     .header__footer h6 {
       padding-top: 1rem;
       word-spacing: 3rem; }
