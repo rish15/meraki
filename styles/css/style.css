@@ -51,14 +51,15 @@
 
 .navigation {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  overflow: hidden; }
   .navigation__brand {
     display: flex; }
     .navigation__brand--logo {
       width: 8rem;
       height: 8rem;
       border-radius: 50%;
-      box-shadow: 0px 0px 4px 1px #000;
+      box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.2);
       margin: 1rem; }
     .navigation__brand--name {
       margin-top: 3rem;
@@ -70,13 +71,54 @@
     display: flex;
     list-style: none;
     margin-left: 1rem; }
+    @media screen and (max-width: 600px) {
+      .navigation__links ul {
+        display: none; } }
     .navigation__links ul a {
       text-decoration: none;
-      font-size: 1.6rem; }
+      font-size: 2rem;
+      font-weight: 600; }
     .navigation__links ul li {
       margin: 1.5rem;
       margin-top: 4rem;
       color: #000; }
+  .navigation__menu {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 3rem;
+    position: sticky;
+    z-index: 1; }
+    .navigation__menu ul li {
+      list-style: none; }
+    .navigation__menu ul li a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: black;
+      padding: 1rem;
+      background-color: #f0cbcb;
+      display: block;
+      margin: 2px; }
+    @media screen and (min-width: 600px) {
+      .navigation__menu {
+        display: none; } }
+    .navigation__menu--button img {
+      width: 30px;
+      height: 30px;
+      cursor: pointer; }
+    .navigation__menu--fab img:hover {
+      transform: scale(1.1);
+      position: relative;
+      z-index: 1; }
+    .navigation__menu #fab {
+      transition: 0.2s all;
+      margin-right: -200px;
+      display: flex;
+      flex-direction: column; }
+    .navigation__menu #showFab {
+      transition: 0.5s all;
+      margin-right: 2rem;
+      display: flex;
+      flex-direction: column; }
 
 .card {
   min-width: 25rem;
@@ -113,6 +155,9 @@
 
 #heading-1 {
   font-size: 3rem; }
+  @media screen and (max-width: 440px) {
+    #heading-1 {
+      font-size: 2rem; } }
 
 *,
 ::after,
@@ -123,10 +168,14 @@
 
 html {
   font-size: 62.5%;
-  font-family: "Cabin"; }
+  font-family: "Cabin";
+  scroll-behavior: smooth; }
 
 body {
   padding: 1rem; }
+  @media screen and (max-width: 500px) {
+    body {
+      padding: 0; } }
 
 .m-1 {
   margin: 1rem; }
@@ -216,10 +265,16 @@ body {
     margin: 3rem;
     justify-content: space-around; }
     .header__message p {
-      font-size: 2.6rem;
-      font-family: "Cabin", sans-serif;
+      font-size: 8rem;
+      font-family: "Ultra", serif;
       padding: 10rem;
-      font-weight: 600; }
+      font-weight: 400; }
+      @media screen and (max-width: 500px) {
+        .header__message p {
+          font-size: 4rem;
+          padding: 2rem;
+          font-weight: 300;
+          text-align: center; } }
     .header__message img {
       width: 100rem;
       height: 40rem;
@@ -242,27 +297,33 @@ body {
 
 .footer {
   background-color: #f0cbcb;
-  height: 14rem;
+  min-height: 14rem;
   padding: 2rem;
   margin: 0 auto; }
+  @media screen and (max-width: 500px) {
+    .footer {
+      padding: 2rem 1rem; } }
   .footer__content {
     margin-right: 3rem;
     display: flex;
-    justify-content: center; }
-    .footer__content--social {
-      width: 33%;
-      border-right: 2px solid #000; }
-      .footer__content--social p {
-        font-size: 1.6rem; }
-      .footer__content--social img {
-        width: 3rem;
-        height: 3rem;
-        margin-right: 1rem;
-        margin-top: 1rem; }
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .footer__content > :not(:first-child) {
+      border-left: 2px solid black; }
+    @media screen and (max-width: 500px) {
+      .footer__content {
+        flex: 1;
+        margin: 0;
+        border: none; } }
+    .footer__content--social p {
+      font-size: 1.6rem; }
+    .footer__content--social img {
+      width: 3rem;
+      height: 3rem;
+      margin-right: 1rem;
+      margin-top: 1rem; }
     .footer__content--address {
-      width: 33%;
-      padding-left: 1rem;
-      border-right: 2px solid #000; }
+      padding-left: 1rem; }
       .footer__content--address p {
         font-size: 1.6rem; }
     .footer__content--contact {
@@ -272,4 +333,5 @@ body {
   .footer__copyright p {
     text-align: center;
     font-size: 1.6rem;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    opacity: 0.5; }

@@ -20,6 +20,10 @@
       href="https://fonts.googleapis.com/css2?family=Cabin&family=Lobster+Two&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ultra&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
@@ -40,6 +44,23 @@
             <a href="#"><li>Contact</li></a>
           </ul>
         </div>
+        <div class="navigation__menu">
+          <div class="navigation__menu--button">
+            <img
+              onclick="showButton()"
+              class="menu-button"
+              src="./assets/images/menu.png"
+              alt=""
+            />
+          </div>
+          <div id="fab">
+            <ul>
+              <li><a href="#about">About</a></li>
+              <li><a href="#products">Products</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <div class="header__message">
         <p>
@@ -52,7 +73,7 @@
       </div>
     </header>
     <main>
-      <section class="products">
+      <section class="products" id="products">
         <h5>Our Products</h5>
         <div class="products__items">
           <div class="card" id="bouquet">
@@ -247,7 +268,7 @@
           </div>
         </div>
       </section>
-      <div class="contact">
+      <div class="contact" id="contact">
         <h5>Contact us</h5>
         <form action="">
           <div>
@@ -301,4 +322,19 @@
       <p>Copyright © 2021 Meraki</p>
     </div>
   </footer>
+  <script>
+    isMenuShown = false;
+    function showButton() {
+      if (!isMenuShown) {
+        isMenuShown = true;
+        let showMenu = document.getElementById("fab");
+        showMenu.id = "showFab";
+      } else {
+        isMenuShown = false;
+        let showMenu = document.getElementById("showFab");
+        showMenu.id = "fab";
+      }
+      console.log(isMenuShown);
+    }
+  </script>
 </html>

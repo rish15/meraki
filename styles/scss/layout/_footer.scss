@@ -1,39 +1,49 @@
 .footer {
   background-color: $color-tertiary;
-  height: 14rem;
+  min-height: 14rem;
   padding: 2rem;
   margin: 0 auto;
+
+  @media screen and (max-width: 500px) {
+    padding: 2rem 1rem;
+  }
 
   &__content {
     margin-right: 3rem;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    & > :not(:first-child) {
+      border-left: 2px solid black;
+    }
+    @media screen and (max-width: 500px) {
+      flex: 1;
+      margin: 0;
+      border: none;
+    }
 
     &--social {
       & p {
         font-size: 1.6rem;
       }
-      width: 33%;
       & img {
         width: 3rem;
         height: 3rem;
         margin-right: 1rem;
         margin-top: 1rem;
       }
-      border-right: 2px solid $color-black;
+      //border-right: 2px solid $color-black;
     }
     &--address {
-      width: 33%;
       padding-left: 1rem;
       & p {
         font-size: 1.6rem;
       }
-      border-right: 2px solid $color-black;
+      //border-right: 2px solid $color-black;
     }
     &--contact {
-      //width: 33%;
       padding-left: 1rem;
-
       & p {
         font-size: 1.6rem;
       }
@@ -44,6 +54,7 @@
       text-align: center;
       font-size: 1.6rem;
       margin-top: 2rem;
+      opacity: 0.5;
     }
   }
 }

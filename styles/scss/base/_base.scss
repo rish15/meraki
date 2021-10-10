@@ -9,8 +9,13 @@ html {
   //this determines the value of one rem
   font-size: 62.5%;
   font-family: "Cabin";
+  scroll-behavior: smooth;
 }
 
 body {
   padding: 1rem;
+
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
 }

@@ -9,10 +9,17 @@
     margin: 3rem;
     justify-content: space-around;
     p {
-      font-size: 2.6rem;
-      font-family: "Cabin", sans-serif;
+      font-size: 8rem;
+      font-family: "Ultra", serif;
       padding: 10rem;
-      font-weight: 600;
+      font-weight: 400;
+
+      @media screen and (max-width: 500px) {
+        font-size: 4rem;
+        padding: 2rem;
+        font-weight: 300;
+        text-align: center;
+      }
     }
 
     img {
