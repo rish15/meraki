@@ -276,21 +276,25 @@
         <h5>Contact us</h5>
         <form name="contact" netlify>
           <div>
-            <input type="text" placeholder="how should we address you?" />
+            <input
+              type="text"
+              name="name"
+              placeholder="how should we address you?"
+            />
           </div>
           <div>
-            <input type="email" placeholder="you@emailUs.com" />
+            <input type="email" name="email" placeholder="you@emailUs.com" />
           </div>
           <div>
             <textarea
               id=""
-              name=""
+              name="message"
               placeholder="your message for us"
               cols="30"
               rows="10"
             ></textarea>
           </div>
-          <button class="mb-1 button-primary">Send</button>
+          <button type="submit" class="mb-1 button-primary">Send</button>
         </form>
       </div>
     </main>
